@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(to top right, #a17cf3, #5c67f2);
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar {
+    background: linear-gradient(to bottom right, #a17cf3, #5c67f2);
+    padding-right: 20%;
+    border: 0.8px solid rgba(255, 255, 255, 0.4);
+}
+
+.rating-text {
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    padding-right: 20px;
+}
+
+.sidebar {
+    background: linear-gradient(to top left, #a17cf3, #5c67f2);
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 0.8px solid rgba(255, 255, 255, 0.4);
+}
+
+.sidebar ul {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 60px;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 17px;
+    line-height: 3px;
+}
+
+.sidebar a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar a.active-link,
+.sidebar a:hover {
+    color: #fff;
+}
+
+.outer-container {
+    width: 100%;
+    padding: 60px 10px 10px 120px;
+}
+
+.main-content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.form-select,
+.form-control {
+    border: 1px solid #ddd;
+    box-shadow: none;
+}
+
+.form-select:focus,
+.form-control:focus {
+    border-color: #a17cf3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(161, 124, 243, 0.5);
+}
+
+.btn-primary {
+    width: 200px;
+    background-color: #a17cf3;
+    border-color: #a17cf3;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #915de0;
+    border-color: #915de0;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .navbar {
+        padding-right: 0;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+}

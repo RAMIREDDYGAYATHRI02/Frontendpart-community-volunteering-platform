@@ -1,0 +1,124 @@
+body {
+    background: linear-gradient(to top right, #a17cf3, #5c67f2);
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: linear-gradient(to bottom right, #a17cf3, #5c67f2);
+    padding-right: 20%;
+    padding-left: 5%;
+    border: 0.8px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.btn-primary {
+    width: 150px;
+    background-color: #a17cf3;
+    border-color: #a17cf3;
+    margin-top: 10px;
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #915de0;
+    border-color: #915de0;
+    transform: scale(1.05);
+}
+
+footer {
+    background: linear-gradient(to top right, #5c67f2, #a17cf3);
+    text-align: center;
+    padding: 10px;
+    border-top: 0.8px solid rgba(255, 255, 255, 0.4);
+}
+
+footer p {
+    color: #e0e0e0;
+    font-size: 14px;
+    margin: 0;
+}
+
+main {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+main img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .btn-primary {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+
+    main img {
+        max-width: 90%;
+    }
+}

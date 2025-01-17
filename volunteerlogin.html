@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Volunteering</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        .form-container {
+            display: none;
+        }
+
+        .form-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="login-form" class="form-container active">
+            <h1>Welcome Back!</h1>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn">Volunteer login</button>
+            </form>
+            <a href="#" onclick="showForm('register-form')" class="register-link">Don't have an account? Register here</a>
+        </div>
+
+
+        
+
+        <div id="register-form" class="form-container">
+            <h1>Create Your Account</h1>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter a strong password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" required>
+                        <option value="">Select your role</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="organization">Organization</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <a href="#" onclick="showForm('login-form')" class="register-link">Already have an account? Login here</a>
+        </div>
+    </div>
+
+    <script>
+        function showForm(formId) {
+            document.querySelectorAll('.form-container').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.getElementById(formId).classList.add('active');
+        }
+    </script>
+</body>
+</html>

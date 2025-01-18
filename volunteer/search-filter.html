@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Volunteering Platform</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./home.css">
 
@@ -95,7 +96,7 @@
                                     More
                                 </button>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
                                   <li><a class="dropdown-item" href="#">My Tasks</a></li>
                                   <li><div class="dropdown-item d-flex justify-content-center" href="#" ><button class="btn btn-danger">Logout</button></div></li>
                                 </ul>
@@ -110,7 +111,7 @@
                         <i class="bi bi-person-circle"></i>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
                         <li><a class="dropdown-item" href="#">My Tasks</a></li>
                         <li><div class="dropdown-item d-flex justify-content-center" href="#" ><button class="btn btn-danger">Logout</button></div></li>
                     </ul>
@@ -121,7 +122,6 @@
 
     <main class="w-100 ">
         <!--Modal to display user profile-->
-        <div class="tasks-block w-100 d-flex flex-column align-items-center" >
             <div class="modal fade" tabindex="-1" id="userProfileModalLabel" aria-labelledby="userProfileModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
@@ -179,12 +179,12 @@
                 <div class="d-flex justify-content-between" style="flex:none;">
                     <form class="filter-form d-flex w-100 justify-content-between" >
                         <div class=" input-group mb-3 serch-box" style="width: 40%;">
-                            <input type="text" class="form-control" placeholder="Enter Task Name" aria-label="Enter task name" aria-describedby="button-addon2">
+                            <input type="text" class="form-control search-input " placeholder="Enter Task Name" aria-label="Enter task name" aria-describedby="button-addon2">
                             <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
                         </div>
                         <div  style="width: 30%;" class="d-flex" >
                             <label for="filter" class="select-label d-lg-flex align-items-center d-none mb-3"  style="flex:none; padding-right:4px">Filter By:</label>
-                            <select class="form-select mb-3" >
+                            <select class="form-select select-menu mb-3" >
                                 <option selected>select filter</option>
                                 <option value="location">Location</option>
                                 <option value="Date">Date</option>
@@ -292,32 +292,32 @@
     <footer class="bg-light text-center py-3">
         <p class="mb-0">© 2025 Community Volunteering Platform. All rights reserved.</p>
     </footer>
+
     <script>
-            const filterDropdown = document.querySelector('.form-select');
-            const searchInput = document.querySelector('.form-control');
+        const filterDropdown = document.querySelector('.select-menu');
+        const searchInput = document.querySelector('.search-input');
 
-            filterDropdown.addEventListener('change', (event) => {
-                const selectedFilter = event.target.value;
+        filterDropdown.addEventListener('change', (event) => {
+            console.log("Changed")
+            const selectedFilter = event.target.value;
 
-                switch (selectedFilter) {
-                    case 'location':
-                        searchInput.placeholder = 'Enter the location';
-                        break;
-                    case 'Date':
-                        searchInput.placeholder = 'Enter the date (e.g., 15-01-2025)';
-                        break;
-                    case 'Skills':
-                        searchInput.placeholder = 'Enter the skill(s)';
-                        break;
-                    default:
-                        searchInput.placeholder = 'Enter Task Name';
-                }
-            });
-
+            switch (selectedFilter) {
+                case 'location':
+                    searchInput.placeholder = 'Enter the location';
+                    break;
+                case 'Date':
+                    searchInput.placeholder = 'Enter the date (e.g., 15-01-2025)';
+                    break;
+                case 'Skills':
+                    searchInput.placeholder = 'Enter the skill(s)';
+                    break;
+                default:
+                    searchInput.placeholder = 'Enter Task Name';
+            }
+        });
     </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+    
 </body>
 
 </html>

@@ -35,6 +35,8 @@
             padding: 10px;
 
         }
+
+        
         @media screen and (max-width: 768px) {
             .search-area {
                 width: 70%;
@@ -62,16 +64,13 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
+                            <a class="nav-link active" href="./home.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tasks</a>
+                            <a class="nav-link" href="./Tasks.html">Tasks</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Rating</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">History</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" >Filter</a>
@@ -106,23 +105,98 @@
 
     <main class="w-100 ">
         <div class="tasks-block w-100 d-flex flex-column align-items-center" >
-            <div class="search-area d-flex justify-content-center">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Enter Task Name" aria-label="Enter task name" aria-describedby="button-addon2">
-                    <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
-                </div>
-            </div>
+            <!-- <div class="search-area d-flex justify-content-center">
+                
+            </div> -->
             <div class="tasks-area">
-                <h1 class="display-6" style="padding: 10px;">All Tasks</h1>
+                <div class="d-flex justify-content-between" style="flex:none;">
+                    <h5 class="display-6" style="padding: 10px; padding-top:0px;font-weight:bold; width:40%">All Tasks</h5>
+                    <div class="input-group mb-3" style="width: 40%;">
+                        <input type="text" class="form-control" placeholder="Enter Task Name" aria-label="Enter task name" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-primary" type="button" id="button-addon2">Search</button>
+                    </div>
+                    
+                </div>
                 <div class="cards-area">
                     <div class="card " >
-                        <h5 class="card-header">Task Name</h5>
-                        <div class="card-body">
+                        <h5 class="card-header d-flex justify-content-between">Task Name<span class="badge text-bg-success">Not Taken</span></h5>
+                        <div class="card-body d-flex">
                           <!-- <h5 class="card-title">Special title treatment</h5> -->
-                          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum soluta dicta unde quo aliquam expedita id dolor eum est?</p>
-                          <div class="d-flex justify-content-space-between"> 
-                            <a href="#" class="btn btn-primary">Sign Up</a>
-                            <a href="#" class="btn btn-info">View details</a>
+                           <div style="width: 94%;">
+                                <p class="card-text" style="max-height: 54px;text-overflow: ellipsis;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum soluta dicta unde quo aliquam expedita id dolor eum est?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa odit voluptate. Repudiandae explicabo enim magnam quasi quo officiis eos ducimus excepturi repellendus!
+                                </p>
+                           </div>
+                          <div class="d-flex flex-column" style="flex: none; gap :5px;"> 
+                            <span><a href="#" class="btn btn-primary">Sign Up</a></span>
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                View
+                            </button>
+                            <div class="modal fade" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title">Task Details</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                              <tr>
+                                                <th>Task ID</th>
+                                                <td>101</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Organisation</th>
+                                                <td>OpenAI Organisation</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Title</th>
+                                                <td>AI Development</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Description</th>
+                                                <td>Develop a feature using AI technology.</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Location</th>
+                                                <td>San Francisco</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Category</th>
+                                                <td>Software Development</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Created Date</th>
+                                                <td>15-01-2025</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Status</th>
+                                                <td>In Progress</td>
+                                              </tr>
+                                              <tr>
+                                                <th>End Date</th>
+                                                <td>31-01-2025</td>
+                                              </tr>
+                                              <tr>
+                                                <th>Required Skills</th>
+                                                <td>
+                                                  <ul>
+                                                    <li>Java</li>
+                                                    <li>Python</li>
+                                                    <li>Machine Learning</li>
+                                                  </ul>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                           </div>
                         </div>
                       </div>

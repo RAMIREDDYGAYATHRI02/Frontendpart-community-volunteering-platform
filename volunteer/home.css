@@ -6,7 +6,7 @@
 }
 
 .bg-image {
-  background-image: url("./wmremove-transformed.jpeg"); /* Replace with your image URL */
+  background-image: url("../wmremove-transformed.jpeg"); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   height: 70vh; /* Full viewport height */

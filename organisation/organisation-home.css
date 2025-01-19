@@ -5,14 +5,32 @@
     
 }
 
-.dropdown-menu[data-bs-popper] {
-  left: -170% !important;
-  top: 120% !important;
-  text-align: center!important;
+.dropdown-toggle::after {
+    display: none;
 }
 
+.custom-dropdown {
+  left: -160% !important;
+  top: 120% !important;
+}
+
+.dropdown-item:active {
+    background-color: #808080 !important;
+}
+
+.btn:focus {
+    border-color: transparent !important;
+}
 .btn.show  {
   border: none !important;
+}
+
+.btn.btn.dropdown-toggle {
+    border:none !important; 
+}
+
+.btn.dropdown-toggle:active {
+    border: none !important;
 }
 
 .btn.show {

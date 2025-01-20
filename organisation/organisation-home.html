@@ -30,14 +30,15 @@
                         </li>
                         <li class="nav-item">
                             <!-- <a class="nav-link" href="./taskRating.html">Rating</a> -->
-                            <div class="dropdown-center">
+                            <div class="dropdown-center ">
                                 <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Rating
                                 </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                                  <li><a class="dropdown-item" href="#">My Tasks</a></li>
-                                </ul>
+                                <ul class="dropdown-menu custom-dropdown-center">
+                                  <li><a class="dropdown-item" href="./my-ratings.html">My Ratings</a></li>
+                                  <li><a class="dropdown-item" href="./completed-tasks.html">Rate Task</a></li>
+                                  <li><a class="dropdown-item" href="./top-volunteers.html">Top Volunteers</a></li>
+                                </ul> 
                               </div>
                         </li>
                         <li class="nav-item d-lg-none">
@@ -46,8 +47,8 @@
                                     More
                                 </button>
                                 <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                                  <li><a class="dropdown-item" href="#">My Tasks</a></li>
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
+                                    <li><a class="dropdown-item" href="../home.html" >Logout</a></li>
                                 </ul>
                               </div>
                         </li>
@@ -60,7 +61,8 @@
                         More
                     </button>
                     <ul class="dropdown-menu custom-dropdown">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
+                        <li><a class="dropdown-item" href="../home.html" >Logout</a></li>
                     </ul>
                   </div>
         </div>
@@ -69,20 +71,60 @@
 
 
     <main class="w-100">
-        <!-- <div class="row align-items-center">
-            <div class="col-lg-6 text-start">
-                <h1 class="mb-4">Welcome to the Community Volunteering Platform</h1>
-                <p class="mb-4" style="font-size: 15px;">
-                    Join us in making a difference by connecting with volunteering opportunities in your community. Together, we can create a better tomorrow. Whether you're interested in environmental conservation, helping the elderly, or supporting education, there are countless ways you can contribute. By volunteering, you not only help others but also grow personally, develop new skills, and form meaningful connections with like-minded individuals. Start today and be the change you want to see in the world!
-                </p>
-                <p style="font-size: 15px;">Discover tasks that suit your skills, track your contributions, and become a part of a meaningful cause. Start your journey today!</p>
-
-                <button class="btn btn-primary" style="border: 1px solid white;">Get Started</button>
+        <div class="modal fade" tabindex="-1" id="userProfileModalLabel" aria-labelledby="userProfileModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">My Profile</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="userProfileForm">
+                      <div class="input-group mb-3" style="width: 100%; margin: 10px;">
+                          <span class="input-group-text" style="width: 20%;">User ID</span>
+                          <input type="text" id="userId" class="form-control" readonly>
+                          <button class="btn btn-outline-warning toggle-edit" type="button">Edit</button>
+                      </div>
+                      <!-- Name -->
+                      <div class="input-group mb-3" style="width: 100%; margin: 10px;">
+                          <span class="input-group-text" style="width: 20%;">Name</span>
+                          <input type="text" id="userName" class="form-control" readonly>
+                          <button class="btn btn-outline-warning toggle-edit" type="button">Edit</button>
+                      </div>
+                      <!-- Email -->
+                      <div class="input-group mb-3" style="width: 100%; margin: 10px;">
+                          <span class="input-group-text" style="width: 20%;">Email</span>
+                          <input type="email" id="userEmail" class="form-control" readonly>
+                          <button class="btn btn-outline-warning toggle-edit" type="button">Edit</button>
+                      </div>
+                      <!-- Phone -->
+                      <div class="input-group mb-3" style="width: 100%; margin: 10px;">
+                          <span class="input-group-text" style="width: 20%;">Phone</span>
+                          <input type="text" id="userPhone" class="form-control" readonly>
+                          <button class="btn btn-outline-warning toggle-edit" type="button">Edit</button>
+                      </div>
+                      <!-- Location -->
+                      <div class="input-group mb-3" style="width: 100%; margin: 10px;">
+                          <span class="input-group-text" style="width: 20%;">Location</span>
+                          <input type="text" id="userRole" class="form-control" readonly>
+                          <button class="btn btn-outline-warning toggle-edit" type="button">Edit</button>
+                      </div>
+                      <!-----Website----->
+                      <div class="input-group mb-3" style="width: 100%; margin: 10px;">
+                        <span class="input-group-text" style="width: 20%;">Website</span>
+                        <input type="text" id="userRole" class="form-control" readonly>
+                        <button class="btn btn-outline-warning toggle-edit" type="button">Edit</button>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Delete Account</button>
+                    <button type="button" class="btn btn-success">Save</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6 text-center">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3VYJTidF7riL_mfOzxf7I2VADOBEijMVGbg&s" alt="Community Volunteering" class="img-fluid rounded shadow">
-            </div>
-        </div> -->
+          </div>
         <div class="bg-image">
             <div class="overlay"></div>
             <div class="content headcontent">
@@ -98,6 +140,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../volunteer/index.js"></script>
 
 </body>
 

@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="./organisation-home.css">
 
     <style>
-        .sub-navbar {
-            background-color: aliceblue;
-            
-        }
         main {
             min-height: 82vh;
         }
@@ -53,51 +49,64 @@
 </head>
 
 <body>
-    <nav class="navbar custom-navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6j95mDNtjlabAxUewbAcxvJnU9w4P7Iu0Og&s" alt="Logo" class="logoimg" style="width: 50px; height: 50px; border-radius: 10px;">
-                <span class="ms-2">Volunteer Platform</span>
-            </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+  <nav class="navbar custom-navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6j95mDNtjlabAxUewbAcxvJnU9w4P7Iu0Og&s" alt="Logo" class="logoimg" style="width: 50px; height: 50px; border-radius: 10px;">
+            <span class="ms-2">Volunteer Platform</span>
+        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./organisation-home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./my-tasks.html">Tasks</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- <a class="nav-link" href="./taskRating.html">Rating</a> -->
+                        <div class="dropdown-center ">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Rating
+                            </button>
+                            <ul class="dropdown-menu custom-dropdown-center">
+                              <li><a class="dropdown-item" href="./my-ratings.html">My Ratings</a></li>
+                              <li><a class="dropdown-item" href="./completed-tasks.html">Rate Task</a></li>
+                              <li><a class="dropdown-item" href="./top-volunteers.html">Top Volunteers</a></li>
+                            </ul> 
+                          </div>
+                    </li>
+                    <li class="nav-item d-lg-none">
+                        <div class="dropdown-center">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                More
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
+                                <li><a class="dropdown-item" href="../home.html" >Logout</a></li>
+                            </ul>
+                          </div>
+                    </li>
+
+                </ul>
+                
+            </div>
+            <div class="dropdown-center d-none d-lg-block">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    More
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./organisation-home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./my-tasks.html">Tasks</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./taskRating.html">Rating</a>
-                        </li>
-                        <li class="nav-item d-lg-none">
-                            <div class="dropdown-center">
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    More
-                                </button>
-                                <ul class="dropdown-menu custom-dropdown">
-                                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                                </ul>
-                              </div>
-                        </li>
+                <ul class="dropdown-menu custom-dropdown">
+                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
+                    <li><a class="dropdown-item" href="../home.html" >Logout</a></li>
+                </ul>
+              </div>
+    </div>
 
-                    </ul>
-                    
-                </div>
-                <div class="dropdown-center d-none d-lg-block">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        More
-                    </button>
-                    <ul class="dropdown-menu custom-dropdown">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                    </ul>
-                  </div>
-        </div>
+</nav>
 
-    </nav>
 
     <main class="w-100 ">
       <!---------------------Model to display user profile----------------------------->
@@ -167,7 +176,7 @@
                            <div style="width: 94%;">
                                 <!-- <p class="card-text" style="max-height: 54px;text-overflow: ellipsis;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum soluta dicta unde quo aliquam expedita id dolor eum est?
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsa odit voluptate. Repudiandae explicabo enim magnam quasi quo officiis eos ducimus excepturi repellendus!
-                                </p> -->Required Skills: <span class="badge text-bg-primary">Skill 1</span>
+                                </p> -->Required Skills: <p><span class="badge text-bg-primary">Skill 1</span>
                                 <span class="badge text-bg-primary">Skill 2</span>
                                 <span class="badge text-bg-primary">Skill 3</span>
                                 <span class="badge text-bg-primary">Skill 4</span>

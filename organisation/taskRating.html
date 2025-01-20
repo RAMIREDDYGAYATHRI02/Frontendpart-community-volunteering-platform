@@ -90,16 +90,26 @@
                             <a class="nav-link" href="./my-tasks.html">Tasks</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./taskRating.html">Rating</a>
+                            <!-- <a class="nav-link" href="./taskRating.html">Rating</a> -->
+                            <div class="dropdown-center ">
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Rating
+                                </button>
+                                <ul class="dropdown-menu custom-dropdown-center">
+                                  <li><a class="dropdown-item" href="./my-ratings.html">My Ratings</a></li>
+                                  <li><a class="dropdown-item" href="./completed-tasks.html">Rate Task</a></li>
+                                  <li><a class="dropdown-item" href="./top-volunteers.html">Top Volunteers</a></li>
+                                </ul> 
+                              </div>
                         </li>
                         <li class="nav-item d-lg-none">
                             <div class="dropdown-center">
                                 <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     More
                                 </button>
-                                <ul class="dropdown-menu modified">
-                                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                                  <li><a class="dropdown-item" href="#">My Tasks</a></li>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
+                                    <li><a class="dropdown-item" href="../home.html" >Logout</a></li>
                                 </ul>
                               </div>
                         </li>
@@ -108,31 +118,32 @@
                     
                 </div>
                 <div class="dropdown-center d-none d-lg-block">
-                    <button class="btn dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         More
                     </button>
                     <ul class="dropdown-menu custom-dropdown">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">My Tasks</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
+                        <li><a class="dropdown-item" href="../home.html" >Logout</a></li>
                     </ul>
                   </div>
         </div>
 
     </nav>
+
     <div class="rating-page">
         <h1>Task Rating</h1>
         <form action="#" method="POST">
             <div class="mb-3">
                 <label for="taskId" class="form-label">Task ID</label>
-                <input type="text" class="form-control" id="taskId" name="taskId" placeholder="Enter Task ID" required>
+                <input type="text" class="form-control" id="taskId" name="taskId" placeholder="Enter Task ID" value = "13" readonly required>
             </div>
             <div class="mb-3">
                 <label for="ratingTo" class="form-label">Rating To</label>
-                <input type="text" class="form-control" id="ratingTo" name="ratingTo" placeholder="Enter the name being rated" required>
+                <input type="text" class="form-control" id="ratingTo" name="ratingTo" placeholder="Enter Id" value = "107" readonly required>
             </div>
             <div class="mb-3">
                 <label for="ratingBy" class="form-label">Rating By</label>
-                <input type="text" class="form-control" id="ratingBy" name="ratingBy" placeholder="Enter your name" required>
+                <input type="text" class="form-control" id="ratingBy" name="ratingBy" placeholder="Enter your Id" value="109" readonly required>
             </div>
             <div class="mb-3">
                 <label class="form-label">Rating Score</label>

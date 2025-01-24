@@ -1,69 +1,96 @@
 .navbar {
-    position: sticky !important;
-    top: 0;
-    z-index: 1000;
-    
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  
+}
+
+body {
+background-image: linear-gradient(to right,#d2ffff  ,#0694c6);
+}
+
+.rating-area {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.card {
+background-color: rgba(255, 255, 255, 0.5);
+/* backdrop-filter: blur(10px); */
+/* -webkit-backdrop-filter: blur(10px); */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-menu[data-bs-popper] {
-  left: -170% !important;
-  top: 120% !important;
-  text-align: center!important;
+left: -170% !important;
+top: 120% !important;
+text-align: center!important;
 }
 
 .btn.show  {
-  border: none !important;
+border: none !important;
 }
 
 .btn.show {
-  background-color: #f8f9fa !important;
+background-color: #f8f9fa !important;
 }
 
 .bg-image {
-  background-image: url("../wmremove-transformed.jpeg"); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  height: 70vh; /* Full viewport height */
-  position: relative;
-  color: white;
+background-image: url("../organisation/wmremove-transformed-L8_G3hYjB-transformed.jpeg"); /* Replace with your image URL */
+background-size: cover;
+background-position: center;
+height: 70vh; /* Full viewport height */
+position: relative;
+color: white;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(90, 90, 90, 0.7); /* Semi-transparent overlay */
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(90, 90, 90, 0.7); /* Semi-transparent overlay */
 }
 
 .content {
-  position: absolute;
-  top: 50%;
-  left: 34%;
-  transform: translate(-50%, -50%);
-  text-align: start;
+position: absolute;
+top: 25%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+color: linear-gradient(to right,#d2ffff  ,#0694c6);
 }
 
+.gradient-text {
+background: linear-gradient(230deg,#d2ffff  ,#7acdeb); 
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
 .custom-navbar {
-    background-color: rgba(255, 255, 255, 0.5); 
-    backdrop-filter: blur(10px);               
-    -webkit-backdrop-filter: blur(10px);      
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  }
-  
+  background-color: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(10px);               
+  -webkit-backdrop-filter: blur(10px);      
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
 
 @media screen and (max-width: 760px) {
 
-    .bg-image {
-        height: 60vh;
-    }
+  .bg-image {
+      height: 60vh;
+  }
 
-    .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
+  .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
     }
+  }

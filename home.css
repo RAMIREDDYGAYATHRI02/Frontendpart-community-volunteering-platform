@@ -1,0 +1,107 @@
+
+    .navbar {
+        position: sticky !important;
+        top: 0;
+        z-index: 1000;
+        
+    }
+
+
+
+    .about-us {
+      margin: 20px ;
+      padding: 20px;
+      width: 100% !important;
+      font-size: 20px; 
+    }
+
+    .faq {
+      margin: 20px ;
+      padding: 20px;
+      width: 100% !important;
+    }
+
+    .about-us-title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .container-custom {
+      /* background: #ffffff; */
+      background-color: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 97% !important;
+      text-align: center;
+  }
+
+    body {
+        background-image: linear-gradient(to right,#d2ffff  ,#0694c6);
+    }
+    
+    .dropdown-menu[data-bs-popper] {
+      left: -170% !important;
+      top: 120% !important;
+      text-align: center!important;
+    }
+    
+    .btn.show  {
+      border: none !important;
+    }
+    
+    .btn.show {
+      background-color: #f8f9fa !important;
+    }
+    
+    .bg-image {
+      background-image: url("../wmremove-transformed.jpeg"); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      height: 70vh; /* Full viewport height */
+      position: relative;
+      color: white;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(90, 90, 90, 0.7); /* Semi-transparent overlay */
+    }
+    
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 34%;
+      transform: translate(-50%, -50%);
+      text-align: start;
+    }
+    
+    .custom-navbar {
+        background-color: rgba(255, 255, 255, 0.5); 
+        backdrop-filter: blur(10px);               
+        -webkit-backdrop-filter: blur(10px);      
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      }
+      
+    
+    @media screen and (max-width: 760px) {
+    
+        .bg-image {
+            height: 60vh;
+        }
+    
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+        }

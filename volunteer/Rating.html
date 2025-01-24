@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="./home.css">
 
     <style>
-        .sub-navbar {
-            background-color: aliceblue;
-            
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
         main {
             min-height: 82vh;
@@ -86,8 +88,8 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
-                                  <li><a class="dropdown-item" href="#">My Tasks</a></li>
-                                  <li><a class="dropdown-item" href="#"><button class="btn btn-danger">Logout</button></a></li>
+                                  <li><a class="dropdown-item" href="./my-tasks.html">My Tasks</a></li>
+                                  <li><a class="dropdown-item" href="../home.html">Logout</a></li>
                                 </ul>
                               </div>
                         </li>
@@ -101,8 +103,8 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#userProfileModalLabel">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">My Tasks</a></li>
-                        <li><a class="dropdown-item" href="#"><button class="btn btn-danger">Logout</button></a></li>
+                        <li><a class="dropdown-item" href="./my-tasks.html">My Tasks</a></li>
+                        <li><a class="dropdown-item" href="../home.html">Logout</a></li>
                     </ul>
                   </div>
         </div>
@@ -156,100 +158,102 @@
                 </div>
               </div>
             </div>
-        <div class="container mt-5">
+        <div class="container mt-3">
             <h1 class="text-center mb-4">Top 10 Volunteers</h1>
-            <table class="table table-bordered table-hover table-striped">
-                <thead class="table-primary text-center">
-                    <tr>
-                        <th>Rank</th>
-                        <th>Name</th>
-                        <th>Rating</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>4.9</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jane Smith</td>
-                        <td>4.8</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Alex Johnson</td>
-                        <td>4.7</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Emily Davis</td>
-                        <td>4.7</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Michael Brown</td>
-                        <td>4.6</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Sarah Wilson</td>
-                        <td>4.5</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Chris Lee</td>
-                        <td>4.4</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Anna White</td>
-                        <td>4.3</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>David Taylor</td>
-                        <td>4.2</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>Linda Martinez</td>
-                        <td>4.1</td>
-                        <td>
-                            <a href="#" class="btn btn-info btn-sm">View Profile</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="rating-area">
+                <table class="table table-hover">
+                    <thead class="table-primary text-center">
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>4.9</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane Smith</td>
+                            <td>4.8</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Alex Johnson</td>
+                            <td>4.7</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Emily Davis</td>
+                            <td>4.7</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Michael Brown</td>
+                            <td>4.6</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Sarah Wilson</td>
+                            <td>4.5</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Chris Lee</td>
+                            <td>4.4</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Anna White</td>
+                            <td>4.3</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>David Taylor</td>
+                            <td>4.2</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Linda Martinez</td>
+                            <td>4.1</td>
+                            <td>
+                                <a href="#" class="btn btn-info btn-sm">View Profile</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </main>

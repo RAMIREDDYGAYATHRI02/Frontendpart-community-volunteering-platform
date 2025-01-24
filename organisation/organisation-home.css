@@ -5,6 +5,44 @@
     
 }
 
+body {
+  background-image: linear-gradient(to right,#d2ffff  ,#0694c6);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* From Uiverse.io by suda-code 
+.btn {
+  /* padding: 12.5px 30px; */
+  /* border: 0;
+  border-radius: 100px; */
+  /* background-color: #2ba8fb; */
+  /* color: #ffffff; */
+  /* font-weight: Bold; */
+  /* transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+} */
+
+
+/*.btn:active {
+   background-color: #3d94cf; 
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}*/
+
+.gradient-text {
+  background: linear-gradient(230deg,#d2ffff  ,#7acdeb); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .dropdown-toggle::after {
     display: none;
 }
@@ -43,7 +81,7 @@
 }
 
 .bg-image {
-  background-image: url("../wmremove-transformed.jpeg"); /* Replace with your image URL */
+  background-image: url("./wmremove-transformed-L8_G3hYjB-transformed.jpeg"); /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   height: 70vh; /* Full viewport height */
@@ -62,10 +100,10 @@
 
 .content {
   position: absolute;
-  top: 50%;
-  left: 34%;
+  top: 25%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  text-align: start;
+  text-align: center;
 }
 
 .custom-navbar {
